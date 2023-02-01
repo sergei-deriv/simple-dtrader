@@ -1,25 +1,18 @@
 import React from 'react';
-import { api2, token } from './api/api';
-// import logo from './logo.svg';
-import './App.css';
+import { getActiveSymbols } from './api/requests';
+import SymbolsList from './components/symbols-list';
 
 function App() {
-  const [authResult, setAuthResult] = React.useState<any>(null);
-  console.log(authResult);
-
-  // const auth = async () => {
-  //   const res = await api2.authorize(token);
-  //   return res ? res : null;
-  // };
+  // const [authResult, setAuthResult] = React.useState<any>(null);
 
   // React.useEffect(() => {
-  //   const res = auth();
-  //   setAuthResult(res);
+  //   getActiveSymbols();
   // }, []);
 
   return (
     <div className='App'>
       <h1>Simple DTrader</h1>
+      <SymbolsList />
     </div>
   );
 }
