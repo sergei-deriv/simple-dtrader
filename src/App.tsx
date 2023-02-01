@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import { api2, token } from './api/api';
+// import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [authResult, setAuthResult] = React.useState<any>(null);
+  console.log(authResult);
+
+  // const auth = async () => {
+  //   const res = await api2.authorize(token);
+  //   return res ? res : null;
+  // };
+
+  // React.useEffect(() => {
+  //   const res = auth();
+  //   setAuthResult(res);
+  // }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>Simple DTrader</h1>
     </div>
   );
 }
